@@ -1,0 +1,3 @@
+PS D:\ClaimtraceClient> python -m venv venv
+PS D:\ClaimtraceClient> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+PS D:\ClaimtraceClient> .\venv\Scripts\Activate.ps1
