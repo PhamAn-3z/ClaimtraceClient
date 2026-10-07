@@ -5,8 +5,10 @@ def get_git_provenance(repo_path="."):
     Trích xuất commit hash và metadata của commit hiện tại
     để tạo node CodeRevision theo chuẩn PROV-DM.
     """
-    repo = git.Repo(repo_path, search_parent_directories=True)
+    repo = git.Repo(repo_path, search_parent_directories=True) 
+    """search_parent_directories=True giúp tìm kiếm thư mục cha nếu không tìm thấy repo trong thư mục hiện tại."""
     commit = repo.head.commit
+    """HEAD trong Git đại diện cho "trạng thái hiện tại bạn đang đứng". Dòng này lấy ra đúng lần commit mới nhất mà bạn vừa thực hiện."""
     
     return {
         "commitHash": commit.hexsha,
